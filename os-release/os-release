@@ -1,5 +1,5 @@
-NAME="Hyprtk running on (CachyOS)"
-PRETTY_NAME="CachyOS"
+NAME="Hyprtk on (CachyOS)"
+PRETTY_NAME="Hyprtk on (CachyOS)"
 ID=arch
 BUILD_ID=rolling
 ANSI_COLOR="38;2;23;147;209"
