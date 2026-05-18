@@ -383,6 +383,8 @@ echo "
 "
 sudo cp ~/cachy-dots/os-release/os-release /usr/lib/
 sudo cp ~/cachy-dots/os-release/os-release /run/systemd/propagate/.os-release-stage/
+sudo cp ~/cachy-dots/os-release/os-release /run/user/$UID/systemd/propagate/.os-release-stage/
+sudo cp ~/cachy-dots/os-release/cachyos-branding /usr/share/libalpm/scripts/
 sudo cp ~/cachy-dots/User-Management/manage-users.desktop /usr/share/applications/
 sudo systemctl enable --now cockpit.socket
 sudo systemctl start cockpit.socket
