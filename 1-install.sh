@@ -538,6 +538,7 @@ echo "-------------------------------------"
 echo "-> Install Hyprland cachy-dots"
 echo "-------------------------------------"
 echo ""
+mv ~/.config/hypr ~/.config/hypr-old
 _installSymLink hypr ~/.config/hypr ~/cachy-dots/hypr/ ~/.config
 _installSymLink fastfetch ~/.config/fastfetch ~/cachy-dots/fastfetch/ ~/.config
 _installSymLink waybar ~/.config/waybar ~/cachy-dots/waybar/ ~/.config
