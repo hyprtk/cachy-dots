@@ -382,6 +382,10 @@ echo "
 #########################################################
 "
 sudo cp ~/cachy-dots/os-release/os-release /usr/lib/
+sudo cp ~/cachy-dots/os-release/os-release /run/systemd/propagate/.os-release-stage/
+sudo cp ~/cachy-dots/os-release/os-release /run/user/$UID/systemd/propagate/.os-release-stage/
+sudo cp ~/cachy-dots/os-release/cachyos-branding /usr/share/libalpm/scripts/
+sudo bash /usr/share/libalpm/scripts/cachyos-branding
 sudo cp ~/cachy-dots/User-Management/manage-users.desktop /usr/share/applications/
 sudo systemctl enable --now cockpit.socket
 sudo systemctl start cockpit.socket
@@ -538,6 +542,7 @@ echo "-------------------------------------"
 echo "-> Install Hyprland cachy-dots"
 echo "-------------------------------------"
 echo ""
+mv ~/.config/hypr ~/.config/hypr-old
 _installSymLink hypr ~/.config/hypr ~/cachy-dots/hypr/ ~/.config
 _installSymLink fastfetch ~/.config/fastfetch ~/cachy-dots/fastfetch/ ~/.config
 _installSymLink waybar ~/.config/waybar ~/cachy-dots/waybar/ ~/.config
